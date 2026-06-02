@@ -1,61 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Escape Room: El viaje del mensaje</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="app-container">
-    <header class="header">
-      <h1>Escape Room: El viaje del mensaje</h1>
-      <p>Guiá el mensaje a través de las 7 capas del modelo OSI antes de que se agote el tiempo.</p>
-      <div class="top-bar">
-        <div class="timer" aria-live="polite">⏱ Tiempo restante: <span id="timer">10:00</span></div>
-        <button id="restartBtn" class="btn btn-secondary" type="button">Reiniciar juego</button>
-      </div>
-    </header>
-
-    <section class="progress-section" aria-label="Progreso de capas OSI">
-      <div id="progressBar" class="progress-track"></div>
-      <ul id="layerSteps" class="layer-steps"></ul>
-    </section>
-
-    <section id="gameCard" class="card">
-      <h2 id="layerTitle"></h2>
-      <p id="layerContext" class="context"></p>
-      <p id="layerQuestion" class="question"></p>
-
-      <label for="answerInput" class="input-label">Tu respuesta</label>
-      <input id="answerInput" type="text" autocomplete="off" placeholder="Escribí la capa..." />
-
-      <div class="actions">
-        <button id="validateBtn" class="btn btn-primary" type="button">Validar respuesta</button>
-        <button id="nextBtn" class="btn btn-success" type="button" disabled>Siguiente capa</button>
-      </div>
-
-      <div id="feedback" class="feedback" aria-live="polite"></div>
-      <div id="hint" class="hint"></div>
-      <div id="unlockedCode" class="code"></div>
-    </section>
-
-    <section id="victoryScreen" class="end-screen hidden" aria-live="polite">
-      <h2>🎉 Acceso concedido</h2>
-      <p>El mensaje completó su viaje desde la Aplicación hasta la Física.</p>
-      <p><strong>Códigos obtenidos:</strong> APP-01 PRE-02 SES-03 TRA-04 RED-05 ENL-06 FIS-07</p>
-      <p class="final-code"><strong>Código final:</strong> OSI-7321</p>
-      <button class="btn btn-secondary" type="button" data-restart="true">Jugar de nuevo</button>
-    </section>
-
-    <section id="defeatScreen" class="end-screen hidden" aria-live="polite">
-      <h2>⛔ Tiempo agotado</h2>
-      <p>El mensaje no logró completar las 7 capas del modelo OSI a tiempo.</p>
-      <p>Reiniciá el juego para volver a intentarlo.</p>
-      <button class="btn btn-secondary" type="button" data-restart="true">Reiniciar juego</button>
-    </section>
+  <main class="app">
+    <div class="network-bg" aria-hidden="true"></div>
+    <section class="screen" aria-live="polite"></section>
   </main>
-
   <script src="script.js"></script>
 </body>
 </html>

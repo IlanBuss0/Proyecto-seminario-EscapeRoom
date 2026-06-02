@@ -1,0 +1,10 @@
+{
+  "name": "escape-room-viaje-del-mensaje",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Escape room web del modelo OSI con podio compartido en vivo.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
