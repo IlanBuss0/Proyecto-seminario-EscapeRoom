@@ -2,7 +2,7 @@
   "name": "escape-room-viaje-del-mensaje",
   "version": "1.0.0",
   "private": true,
-  "description": "Escape room web del modelo OSI con podio compartido en vivo.",
+  "description": "Escape room web educativa sobre el Modelo OSI.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
